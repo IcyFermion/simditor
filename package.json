@@ -1,6 +1,6 @@
 {
   "name": "simditor",
-  "version": "2.3.6",
+  "version": "2.3.6-getqujing",
   "description": "A simple online editor",
   "keywords": "editor simditor",
   "repository": {
@@ -18,10 +18,10 @@
   "main": "lib/simditor.js",
   "homepage": "http://simditor.tower.im",
   "dependencies": {
-    "jquery": "~2.1.4",
-    "simple-hotkeys": "~1.0.3",
+    "jquery": "^3.1.1",
+    "simple-hotkeys": "https://github.com/nickhsu/simple-hotkeys.git",
     "simple-uploader": "https://github.com/nickhsu/simple-uploader.git",
-    "simple-module": "~2.0.6"
+    "simple-module": "https://github.com/nickhsu/simple-module.git",
   },
   "devDependencies": {
     "grunt": "0.x",
