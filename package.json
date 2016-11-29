@@ -21,7 +21,7 @@
     "jquery": "^3.1.1",
     "simple-hotkeys": "https://github.com/nickhsu/simple-hotkeys.git",
     "simple-uploader": "https://github.com/nickhsu/simple-uploader.git",
-    "simple-module": "https://github.com/nickhsu/simple-module.git",
+    "simple-module": "https://github.com/nickhsu/simple-module.git"
   },
   "devDependencies": {
     "grunt": "0.x",
