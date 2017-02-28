@@ -11,12 +11,7 @@ class Formatter extends SimpleModule
   _init: ->
     @editor = @_module
 
-    @_allowedTags = $.merge(
-      ['br', 'span', 'a', 'img', 'b', 'strong', 'i', 'strike',
-      'u', 'font', 'p', 'ul', 'ol', 'li', 'blockquote', 'pre', 'code', 'h1',
-      'h2', 'h3', 'h4', 'hr'],
-      @opts.allowedTags
-    )
+    @_allowedTags = @opts.allowedTags
 
     @_allowedAttributes = $.extend
       img: ['src', 'alt', 'width', 'height', 'data-non-image']
