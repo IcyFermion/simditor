@@ -10,7 +10,7 @@
     // like Node.
     module.exports = factory(require("jquery"),require("simple-module"),require("simple-hotkeys"),require("simple-uploader"));
   } else {
-    root['Simditor'] = factory(jQuery,SimpleModule,simple.hotkeys,simple.uploader);
+    root['Simditor'] = factory(root["jQuery"],root["SimpleModule"],root["simple.hotkeys"],root["simple.uploader"]);
   }
 }(this, function ($, SimpleModule, simpleHotkeys, simpleUploader) {
 
@@ -467,7 +467,7 @@ Formatter = (function(superClass) {
 
   Formatter.prototype._init = function() {
     this.editor = this._module;
-    this._allowedTags = $.merge(['br', 'span', 'a', 'img', 'b', 'strong', 'i', 'strike', 'u', 'font', 'p', 'ul', 'ol', 'li', 'blockquote', 'pre', 'code', 'h1', 'h2', 'h3', 'h4', 'hr'], this.opts.allowedTags);
+    this._allowedTags = this.opts.allowedTags;
     this._allowedAttributes = $.extend({
       img: ['src', 'alt', 'width', 'height', 'data-non-image'],
       a: ['href', 'target'],
@@ -2679,8 +2679,8 @@ Simditor.i18n = {
     'linkText': '链接文字',
     'linkUrl': '链接地址',
     'linkTarget': '打开方式',
-    'openLinkInCurrentWindow': '在新窗口中打开',
-    'openLinkInNewWindow': '在当前窗口中打开',
+    'openLinkInCurrentWindow': '在当前窗口中打开',
+    'openLinkInNewWindow': '在新窗口中打开',
     'removeLink': '移除链接',
     'ol': '有序列表',
     'ul': '无序列表',
