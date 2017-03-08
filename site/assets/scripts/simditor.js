@@ -2265,7 +2265,7 @@ Clipboard = (function(superClass) {
           return;
         }
         if (!imageFile.name) {
-          imageFile.name = "Clipboard Image.png";
+          imageFile.name = "Clipboard Image-" + (Date.now()) + ".png";
         }
         if (this.editor.triggerHandler('pasting', [imageFile]) === false) {
           return;
@@ -2359,7 +2359,7 @@ Clipboard = (function(superClass) {
               return;
             }
             blob = this.editor.util.dataURLtoBlob($img.attr("src"));
-            blob.name = "Clipboard Image.png";
+            blob.name = "Clipboard Image-" + (Date.now()) + ".png";
             uploadOpt = {};
             uploadOpt[this.opts.pasteImage] = true;
             if ((ref1 = this.editor.uploader) != null) {

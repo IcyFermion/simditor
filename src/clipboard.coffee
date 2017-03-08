@@ -55,7 +55,7 @@ class Clipboard extends SimpleModule
         return unless imageFile? and @opts.pasteImage
 
         unless imageFile.name
-          imageFile.name = "Clipboard Image.png"
+          imageFile.name = "Clipboard Image-#{Date.now()}.png"
 
         return if @editor.triggerHandler('pasting', [imageFile]) == false
 
@@ -135,7 +135,7 @@ class Clipboard extends SimpleModule
           if /^data:image/.test($img.attr('src'))
             return unless @opts.pasteImage
             blob = @editor.util.dataURLtoBlob $img.attr( "src" )
-            blob.name = "Clipboard Image.png"
+            blob.name = "Clipboard Image-#{Date.now()}.png"
 
             uploadOpt = {}
             uploadOpt[@opts.pasteImage] = true
